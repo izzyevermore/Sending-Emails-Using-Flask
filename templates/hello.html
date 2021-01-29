@@ -1,0 +1,14 @@
+<!doctype html>
+<head>
+    <script src="/static/main.js"></script>
+<title>Hello from Flask</title>
+</head>
+<body>
+    <a href="/contact/">Contact Me</a>
+    <a href="/about/">About</a>
+    {% if name %}
+    {% else %}
+    <h1>Hello, Isaiah</h1>
+    {% endif %}
+</body>
+</html>
