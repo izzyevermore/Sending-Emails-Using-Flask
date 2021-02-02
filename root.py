@@ -21,13 +21,13 @@ def contact():
 def send_email():
     server = SMTP('smtp.gmail.com', 587)
     try:
-        sender_email = "izzyevermore123gmail.com"
-        receiver_email = request.form[('mail')]
-        password = "callmedorg"
+        sender_email = request.form[('mail')]
+        receiver_email = "izzyevermore123@gmail.com"        #Created a dummy account
+        password = "callmedorg420"
         message = request.form[('comment')]
         server.starttls()
 
-        server.login(sender_email, password)
+        server.login(receiver_email, password)
         server.sendmail(sender_email, receiver_email, message)
         print("the message has been successfully sent")
 
